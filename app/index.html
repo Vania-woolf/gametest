@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Test</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- build:css css/combined.css -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<!-- endbuild -->
+</head>
+<body class="main_page">
+	
+	<header>
+		<div class="header ">
+			<div class="header-content d-flex justify-content-between">
+
+
+
+				<div class="header-logo">
+					<a href="/" class="header-logo__link">
+						<img src="img/logo.png" alt="logo" class="header-logo__img" />
+					</a>
+				</div>
+
+				<div class="mt-0 d-inline-flex">
+					<ul class="header-nav d-flex list-style-none p-nav__center">
+						<li class="header-nav__items"><a href="#">Marketplace</a></li>
+						<li class="header-nav__items m_l-items play"><a href="#">Battleground</a></li>
+						<li class="header-nav__items m_l-items"><a href="#">Buster Packs</a></li>
+						
+					</ul>
+				</div>
+				<!-- login block -->
+				<div class="login-block d-none">
+					<div class="login-block login">
+						<a href="#" class="login-href">Sign in</a>
+					</div>
+					<div class="login-block register">
+						<a href="#" class="register-href">Register</a>
+					</div>
+				</div>
+				<!-- login block end -->
+
+				<div class="user-nav">
+					
+					<div class="user-nav-item m_l-item user-nav__presets">
+						<a href="#" class="nav__presets_href">
+							<img class="nav__ico" src="./img/nav__presets-ico.png" alt="presets-ico" />
+						</a>
+					</div>
+
+					<div class="user-nav-item m_l-item user-nav__toolbox">
+						<a href="#" class="nav__toolbox_href">
+							<img class="nav__ico" src="./img/nav__toolbox-ico.png" alt="presets-ico" />
+						</a>
+					</div>
+
+					<div class="user-nav-item m_l-item user-nav__cards">
+						<a href="#" class="nav__cards_href">
+							<img class="nav__ico" src="./img/nav__cards-ico.png" alt="presets-ico" />
+						</a>
+					</div>
+
+					<div class="user-nav-item m_l-item_72 user-nav__money"> 
+						<a href="#">142</a>
+					</div>
+
+					<div class="user-nav-item m-t_fix m_l-item_33 user-nav__achievement">
+						<a href="#">
+							<img class="nav__ico" src="./img/achievement-cup-ico.png" alt="cup-ico"/>
+						</a>
+					</div>
+
+					<div class="user-nav-item m-t_fix m_l-item_33 user-nav__avatar">
+						<a href="#" class="user-online"><!-- class="user-offline" -->
+							<img class="nav__ico" src="./img/achievement-cup-ico.png" alt="cup-ico"/>
+						</a>
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+	</header>
+
+	<div class="collapse-block">
+		<div class="container-fluid content">
+			<div class="row">
+				<div class="col pad-0">
+					<div class="collapse multi-collapse" id="CollapseElem1">
+						<div class="collapse-block_content">
+							<div class="coll-content content-b_1">
+								<div class="container-fluid">
+									<div class="row row__border-bottom_collapse">
+
+										<div class="col-6 pad-0">
+											<div class="collapse__user-money">
+												142
+											</div>
+										</div>
+										<div class="col-6 pad-0">
+											<div class="collapse__user-edit-profile">
+												Edit Profile
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="coll-content content-b_2">2</div>
+							<div class="coll-content content-b_3">3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main>
+
+		<ul class="nav nav-pills p-relative d-flex justify-content-center m-t_fix" id="pills-tab" role="tablist">
+			<li class="nav-item pills-relative ">
+				<a class="nav-link active pills-presets-href" id="pills-presets-tab" data-toggle="pill" href="#pills-presets" role="tab" aria-controls="pills-presets" aria-selected="true">Presets</a>
+			</li>
+			<li class="nav-item pills-relative">
+				<a class="nav-link pills-items-href" id="pills-items-tab" data-toggle="pill" href="#pills-items" role="tab" aria-controls="pills-items" aria-selected="false">Items</a>
+			</li>
+			<li class="nav-item pills-relative">
+				<a class="nav-link pills-pets-href" id="pills-pets-tab" data-toggle="pill" href="#pills-pets" role="tab" aria-controls="pills-pets" aria-selected="false">Pets</a>
+			</li>
+			<li class="nav-item pills-relative">
+				<a class="nav-link pills-statistics-href" id="pills-statistics-tab" data-toggle="pill" href="#pills-statistics" role="tab" aria-controls="pills-statistics" aria-selected="false">Statistics</a>
+			</li>
+			<li class="nav-item button-arrow_info">
+				<a class="arrow_info-button collapsed" data-toggle="collapse" href="#CollapseElem1" role="button" aria-expanded="false" aria-controls="CollapseElem1"></a>
+			</li>
+		</ul>
+<!-- 		<div class="tab-content tab-content__pets" id="pills-tabContent">
+
+			<div class="tab-pane fade show active" id="pills-presets" role="tabpanel" aria-labelledby="pills-presets-tab">
+				
+				<div class="tab-pane__content_presets">
+					
+					<div class="container-fluid">	
+						<div class="row">
+
+							<div class="col-2">
+								<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+									<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+									<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+									<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+									<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+								</div>
+							</div>
+							<div class="col-10">
+								<div class="tab-content" id="v-pills-tabContent">
+									<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">1111</div>
+									<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">2222</div>
+									<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">3333</div>
+									<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">4444</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+			<div class="tab-pane fade" id="pills-items" role="tabpanel" aria-labelledby="pills-items-tab">222</div>
+			<div class="tab-pane fade" id="pills-pets" role="tabpanel" aria-labelledby="pills-pets-tab">333</div>
+			<div class="tab-pane fade" id="pills-statistics" role="tabpanel" aria-labelledby="pills-statistics-tab">444</div>
+		</div> -->
+
+	</main>
+
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<span class="text-muted"></span>
+		</div>
+	</footer>
+
+
+
+
+
+	<div class="container-fluid">
+
+
+
+
+
+	</div>
+
+	
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/dist/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/dist/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/dist/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/dest/respond.min.js"></script>
+<![endif]-->
+
+<!-- build:js scripts/combined.js -->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>

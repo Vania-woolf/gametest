@@ -1,0 +1,412 @@
+$fontSizeBody: 16px 
+$gradientButtonPlay: linear-gradient(left, rgba(36,35,51,1) 0%, rgba(60,59,83,1) 100%) 
+$gradientButtonPlayBorder: linear-gradient(left, rgba(255,144,90,1) 0%, rgba(217,79,199,1) 100%) 
+$colorLink: rgba(153,153,204,1) 
+$colorLinkLogin: #666699
+$HeaderFooterBg: url('../img/bg-nav.png') 
+$xs: "(min-width: 319px)"
+$_xs: "(max-width: 350px)"
+$sm: "(min-width: 767px)"
+$_sm: "(max-width: 766px)"
+$md: "(min-width: 1025px)"
+$_md: "(max-width: 1024px)"
+$lg: "(min-width: 1224px)"
+$_lg: "(max-width: 1224px)"
+$_xlg: "(max-width: 1700px)"
+$xlg: "(min-width: 1700px)"
+$hxlg: "(min-width: 2200px)"
+$fontSizeHxlg32: 2.125rem 
+$fontSizeXlg32: calc(2.125rem/1.57) 
+$fontSize_Xlg32: calc(2.125rem/2.2) 
+html
+	font-size: $fontSizeBody
+body
+	font-family: "GeomanistBook"
+	max-width: 3000px
+.main_page
+	background-image: url('../img/bg-img.png')
+	background-repeat: repeat
+.content
+	max-width: 1520px 
+.header
+	background-image: $HeaderFooterBg 
+	background-repeat: repeat
+	padding-top: 25px
+	padding-bottom: 25px
+.header-logo 
+	display: inline-block
+	.header-logo__link
+		margin-left: 25px
+		.header-logo__img
+			height: 49px
+			@media #{$xlg}
+				height: calc(77px/1.57)
+			@media #{$_xlg}
+				height: calc(77px/2.2)
+.list-style-none li	
+	list-style: none 
+.header-nav__items
+	font-family: "GeomanistMedium" 
+.header-nav__items a 
+	color: $colorLink 
+	font-size: 1rem 
+	text-decoration: none
+	letter-spacing: 0.7px
+.m_l-items
+	margin-left: 125px 
+	@media #{$xlg}
+		margin-left: calc(125px/1.57) 
+	@media #{$_xlg}
+		margin-left: calc(125px/2.2) 
+.header-nav__items.play a
+	font-family: "MyriadProRegular", sans-serif
+	color: #ffffff 
+	background-image: $gradientButtonPlay 
+	border-radius: 25px 
+	z-index: 10 
+	position: relative 
+	box-shadow: inset 0px 0px 0px 3px rgba(36,35,51,1) 
+	padding: 14px 35px 
+	box-shadow: 0px 14.5px 10.5px 0 rgba(9, 10, 15, 0.15) 
+.header-nav__items.play a::after 
+	background-image: linear-gradient(90deg, #d94fc7 0%, #ff905a 100%) 
+	border-radius: 28px 
+	position: absolute 
+	width: auto 
+	top: -2px 
+	bottom: -2px 
+	left: -2px 
+	right: -2px 
+	z-index: -1 
+	height: auto
+	content: '' 
+.user-nav 
+	color: rgba(157,154,204,1) 
+	display: inline-flex 
+	margin-top: 12px
+	margin-right: 62px 
+	@media #{$xlg} 
+		margin-right: calc(62px/1.57) 
+	@media #{$_xlg} 
+		margin-right: calc(62px/2.2)
+a.nav-link
+	color: #9999cc 
+.tab-content.tab-content__pets 
+	color: rgba(157,154,204,1) 
+.footer 
+	bottom: 0 
+	width: 100%
+	height: 60px 
+	line-height: 60px
+	background-image: $HeaderFooterBg 
+	position: absolute 
+.p-nav__center
+	right: 50% 
+	left: auto 
+	margin-top: 10px 
+	position: absolute 
+	@media #{$hxlg} 
+		margin-right: -70px
+	@media #{$xlg} 
+		margin-right: -65px 
+	@media #{$_xlg}
+		margin-right: -50px
+.login-block 
+	color: $colorLink
+	display: inline-flex 
+	font-size: $fontSizeHxlg32 
+	font-family: "MyriadProRegular", sans-serif
+	@media #{$xlg} 
+		font-size: $fontSizeXlg32 
+	@media #{$_xlg} 
+		font-size: $fontSize_Xlg32 
+	a.login-href,a.register-href 
+		margin-top: 12px 
+		color: $colorLinkLogin
+		text-decoration: none
+.login-block.register
+	@media #{$hxlg} 
+		margin-right: 100px 
+		a
+			padding-left: 20px
+	@media #{$xlg} 
+		margin-right: calc(100px/1.57) 
+		a
+			padding-left: calc(20px/1.57)
+	@media #{$_xlg}
+		margin-right: calc(100px/2.2) 
+		a 
+			padding-left: calc(20px/2.2)
+.login-block.login
+	&:before
+		background: url(../img/login_rounded_right_ico.png) 
+		position: absolute 
+		width: 28px 
+		height: 25px 
+		margin-top: 16px 
+		background-size: 100% 
+		content: ""
+	a 
+		border-right: 1px solid 
+		padding-left: 40px 
+	@media #{$hxlg} 
+		a
+			padding-right: 20px
+	@media #{$xlg}
+		a
+			padding-right: calc(20px/1.57)
+	@media #{$_xlg}
+		a 
+			padding-right: calc(20px/2.2)
+.nav__ico
+	@media #{$hxlg}
+		width: 55px 
+	@media #{$xlg} 
+		width: calc(55px/1.57)
+	@media #{$_xlg} 
+		width: calc(55px/2.2)
+.user-nav-item.user-nav__money a
+	color: #ffffff 
+	background-image: $gradientButtonPlay 
+	border-radius: 28px 
+	text-decoration: none 
+	border-radius: 25px 
+	z-index: 10 
+	position: relative 
+	box-shadow: inset 0px 0px 0px 3px rgba(36,35,51,1)
+	padding: 14px 22px 14px 47px 
+	text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1) 
+.user-nav-item.user-nav__money a::after 
+	border-radius: 25px 
+	position: absolute 
+	width: auto 
+	top: -2px 
+	bottom: -2px 
+	left: -2px 
+	right: -2px
+	z-index: -1 
+	height: auto 
+	content: ''
+	background-image: linear-gradient(90deg, rgb(102, 51, 204) 0%, rgb(204, 102, 204) 100%) 
+.user-nav-item.user-nav__money a::before 
+	content: '' 
+	background-image: url('../img/gem.png') 
+	position: absolute 
+	width: 40px 
+	height: 40px 
+	z-index: 22 
+	top: 6px 
+	left: 6px 
+	background-size: cover 
+	background-repeat: no-repeat 
+.m_l-item 
+	@media #{$hxlg}
+		margin-left: 77px
+	@media #{$xlg}
+		margin-left: calc(77px/1.57)
+	@media #{$_xlg} 
+		margin-left: calc(77px/2.2)
+.m_l-item_72
+	@media #{$hxlg}
+		margin-left: 72px
+	@media #{$xlg}
+		margin-left: calc(72px/1.57)
+	@media #{$_xlg} 
+		margin-left: calc(72px/2.2) 
+.m_l-item_33
+	@media #{$hxlg}
+		margin-left: 33px
+	@media #{$xlg}
+		margin-left: calc(33px/1.57)
+	@media #{$_xlg} 
+		margin-left: calc(33px/2.2)
+.user-nav-item.user-nav__achievement a
+	color: #ffffff 
+	background-image: $gradientButtonPlay 
+	border-radius: 50% 
+	z-index: 10 
+	position: relative 
+	box-shadow: inset 0px 0px 0px 3px rgba(36,35,51,1) 
+	padding: 17px 
+.user-nav-item.user-nav__achievement a::after
+	border-radius: 50% 
+	position: absolute 
+	width: auto 
+	top: -2px 
+	bottom: -2px 
+	left: -2px 
+	right: -2px 
+	z-index: -1 
+	height: auto 
+	content: ''
+	background-image: radial-gradient(circle farthest-corner at bottom center, rgb(102, 102, 153) 0%, rgb(102, 102, 153) 100%) 
+.m-t_fix 
+	margin-top: -1px 
+.user-nav-item.user-nav__avatar a
+	color: #ffffff 
+	background-image: $gradientButtonPlay 
+	border-radius: 50% 
+	z-index: 10 
+	position: relative 
+	box-shadow: inset 0px 0px 0px 3px rgba(36,35,51,1) 
+	padding: 17px 
+.user-nav-item.user-nav__avatar a::after 
+	border-radius: 50% 
+	position: absolute 
+	width: auto 
+	top: -2px 
+	bottom: -2px 
+	left: -2px 
+	right: -2px 
+	z-index: -1 
+	height: auto 
+	content: ''
+.user-nav-item.user-nav__avatar a.user-online::after 
+	background-image: linear-gradient(90deg, rgb(102, 51, 204) 0%, rgb(204, 102, 204) 100%) 
+.user-nav-item.user-nav__avatar a.user-offline::after 
+	background-image: radial-gradient(circle farthest-corner at bottom center, rgb(102, 102, 153) 0%, rgb(102, 102, 153) 100%)
+.nav-pills
+	font-size: 1rem 
+	background-image: url('../img/bg-nav.png')
+	background-repeat: repeat
+.nav-item .nav-link.active 
+	border-image: url('../img/border-b-img.png') 1 stretch 
+	border-bottom: 3px solid transparent 
+	background-color: rgba(50,49,69,0.2) 
+.pills-relative 
+	position: relative 
+.pills-relative a.nav-link.active:after
+	content: '' 
+	background-image: url(../img/bg-button.png) 
+	background-size: 100% 
+	position: absolute 
+	width: 100% 
+	height: 100% 
+	top: 0 
+	left: 0
+.nav-pills .nav-link 
+	border-radius: 0 
+	@media #{$hxlg} 
+		padding: 40px 120px
+	@media #{$xlg}
+		padding: 20px 80px 
+	@media #{$_xlg} 
+		padding: 16px 64px 
+.pills-presets-href:before,
+.pills-items-href:before,
+.pills-pets-href:before,
+.pills-statistics-href:before,
+.active.pills-presets-href:before,
+.active.pills-items-href:before,
+.active.pills-pets-href:before,
+.active.pills-statistics-href:before	
+	content: '' 
+	background-size: contain 
+	background-repeat: no-repeat 
+	position: absolute 
+.pills-presets-href:before
+	background-image: url('../img/presets-non-active-ico.png') 
+	width: 33px 
+	height: 33px 
+	top: 23px 
+	left: 34px 
+.active.pills-presets-href:before
+	background-image: url('../img/presets-active-ico.png') 
+.pills-items-href:before
+	background-image: url('../img/toolbox-non-active.png') 
+	width: 49px 
+	height: 49px 
+	top: 19px 
+	left: 26px 
+.active.pills-items-href:before
+	background-image: url('../img/toolbox-ico.png')
+.pills-pets-href:before
+	background-image: url('../img/rectangle-non-active-ico.png') 
+	width: 37px 
+	height: 37px 
+	top: 21px 
+	left: 35px
+.active.pills-pets-href:before
+	background-image: url('../img/rectangle-active-ico.png')	
+.pills-statistics-href:before
+	background-image: url('../img/statistics-non-active-ico.png') 
+	width: 36px 
+	height: 35px 
+	top: 20px 
+	left: 34px
+.active.pills-statistics-href:before
+	background-image: url('../img/statistics-active-ico.png') 
+.p-relative
+	position: relative 
+.button-arrow_info 
+	position: absolute
+	right: 0
+	display: flex 
+	height: 100% 
+	background-color: rgba(157,154,204,0.039) 
+	a.arrow_info-button
+		background-image: url('../img/arrow-icon.png') 
+		background-repeat: no-repeat 
+		background-position: 35% 50% 
+		transform: rotate(0deg) 
+		@media #{$hxlg}
+			background-size: 28px 36px
+		@media #{$xlg}
+			background-size: 19px 23px
+		@media #{$_xlg} 
+			background-size: 14px 18px
+	a.arrow_info-button.collapsed
+		background-position: 65% 50% 
+		transform: rotate(180deg) 
+	@media #{$hxlg}
+		width: 136px 
+	@media #{$xlg}
+		width: 136px 
+		background-size: 19px 23px
+	@media #{$_xlg} 
+		width: 95px 
+		background-size: 14px 18px
+	a 
+		width: 100%
+.col.pad-0
+	padding: 0
+.collapse-block_content
+	@media #{$hxlg}
+		padding: 55px 62px 58px 60px
+	@media #{$xlg} 
+		padding: calc(55px/1.57) calc(62px/1.57) calc(58px/1.57) calc(60px/1.57) 
+	@media #{$_xlg} 
+		padding: calc(55px/2.2) calc(62px/2.2) calc(58px/2.2) calc(60px/2.2) 
+.row__border-bottom_collapse 
+	border-bottom: 2px solid rgba(111, 109, 153, 0.1)		
+.collapse-block_content
+	display: flex 
+	.coll-content
+		background-image: url(../img/bg-nav.png)
+		background-repeat: repeat 
+		position: relative 
+		box-shadow: 0px 11px 20px 0 rgba(36, 35, 51, 0.45) 
+		height: 214px 
+		border-radius: 5px
+	.content-b_1,.content-b_3
+		width: 38% 
+	.content-b_2
+		width: 24% 
+		@media #{$hxlg}
+			margin: 0 70px 
+		@media #{$xlg}
+			margin: 0 calc(70px/1.57) 
+		@media #{$_xlg}
+			margin: 0 calc(70px/2.2) 
+.content-b_1:before
+	content: '' 
+	position: absolute 
+	width: 100% 
+	height: 100% 
+	background: radial-gradient(circle farthest-corner at center center, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 35%)
+.content-b_2:before
+	content: '' 
+	position: absolute 
+	width: 100% 
+	height: 100% 
+	background: radial-gradient(circle farthest-corner at center center, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 50%) 

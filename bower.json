@@ -1,0 +1,25 @@
+{
+  "name": "gin",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "app/libs"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.7.1",
+    "animate.css": "^3.5.2",
+    "jquery.maskedinput": "^1.4.1",
+    "jquery-validation": "^1.17.0",
+    "wow": "wowjs#^1.1.2"
+  },
+  "authors": [
+    "Ilchuk Ivan <iilchuk.it@gmail.com>"
+  ]
+}
