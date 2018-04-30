@@ -618,3 +618,18 @@ a.nav-link {
   background: -webkit-radial-gradient(circle farthest-corner at center center, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
   background: -o-radial-gradient(circle farthest-corner at center center, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
   background: radial-gradient(circle farthest-corner at center center, rgba(255, 255, 255, 0.05) 0%, transparent 50%); }
+
+.collapse__user-edit-profile {
+  text-align: right;
+  padding: 34px 36px 29px 0; }
+  .collapse__user-edit-profile a {
+    color: #9d9acc;
+    letter-spacing: 0.6px;
+    text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none; }
+
+.collapse__user-money span {
+  font-size: 1.1875rem;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1); }
