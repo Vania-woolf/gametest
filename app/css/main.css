@@ -689,6 +689,46 @@ a.nav-link {
   border-color: #7e79c4;
   opacity: 0.1; }
 
+.collapse__sold-pets::before {
+  content: '';
+  background-image: url("../img/Shape-5-copy.png");
+  position: absolute;
+  width: 51px;
+  height: 65px;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  left: 18px;
+  top: 58px; }
+
+.collapse__bought-pets::before {
+  content: '';
+  background-image: url("../img/Shape-5-copy-rotate.png");
+  position: absolute;
+  width: 51px;
+  height: 65px;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  left: 20px;
+  top: 62px; }
+
+.collapse__bought-pets span::before {
+  content: '';
+  -webkit-box-shadow: -36px 8px 57px -10px #3deb6e;
+          box-shadow: -36px 8px 57px -10px #3deb6e;
+  position: absolute;
+  width: 30px;
+  height: 30px; }
+
+.collapse__sold-pets span:before {
+  content: '';
+  -webkit-box-shadow: -25px 8px 57px -10px #6d30c8;
+          box-shadow: -25px 8px 57px -10px #6d30c8;
+  position: absolute;
+  width: 33px;
+  height: 30px; }
+
 .collapse__sold-pets_text, .collapse__bought-pets_text, .collapse__circle-total-games_text, .collapse__circle-won-games_text, .collapse__circle-lost-games_text {
   letter-spacing: 0.6px;
   text-align: center;
@@ -719,12 +759,14 @@ a.nav-link {
   left: 0;
   top: 0;
   z-index: -1;
-  opacity: .6; }
+  opacity: .33; }
 
 .collapse__circle-total-games .num {
-  background-image: url("../img/user-avatar.png");
-  -webkit-background-size: cover;
-          background-size: cover; }
+  background-image: url("../img/total-games-bg.png");
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: 2px 40px;
+  background-repeat: no-repeat; }
 
 .collapse__circle-total-games .num::after {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2d4400), to(#ffffff00)), -webkit-gradient(linear, right top, left top, from(#57b9c9), to(#6d30c8));
@@ -732,11 +774,25 @@ a.nav-link {
   background-image: -o-linear-gradient(#2f2d4400, #ffffff00), -o-linear-gradient(right, #57b9c9, #6d30c8);
   background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #6d30c8); }
 
+.collapse__circle-won-games .num {
+  background-image: url("../img/total-games-bg.png");
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: 2px 40px;
+  background-repeat: no-repeat; }
+
 .collapse__circle-won-games .num::after {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2d4400), to(#ffffff00)), -webkit-gradient(linear, right top, left top, from(#57b9c9), to(#3deb6e));
   background-image: -webkit-linear-gradient(#2f2d4400, #ffffff00), -webkit-linear-gradient(right, #57b9c9, #3deb6e);
   background-image: -o-linear-gradient(#2f2d4400, #ffffff00), -o-linear-gradient(right, #57b9c9, #3deb6e);
   background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #3deb6e); }
+
+.collapse__circle-lost-games .num {
+  background-image: url("../img/total-games-bg.png");
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: 2px 40px;
+  background-repeat: no-repeat; }
 
 .collapse__circle-lost-games .num::after {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2d4400), to(#ffffff00)), -webkit-gradient(linear, right top, left top, from(#f2626c), to(#e553aa));
