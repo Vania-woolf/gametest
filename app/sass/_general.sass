@@ -369,8 +369,8 @@ a.nav-link
 		background-size: 14px 18px
 	a 
 		width: 100%
-.col.pad-0
-	padding: 0
+.pad-0
+	padding: 0 !important 
 .collapse-block_content
 	@media #{$hxlg}
 		padding: 55px 62px 58px 60px
@@ -420,8 +420,39 @@ a.nav-link
 		text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1)
 		text-decoration: none
 .collapse__user-money
+	padding: 27px 1px 1px 16px 
+	.collapse__user-money_img
+		padding-right: 16px 
 	span
 		font-size: 1.1875rem 
 		letter-spacing: 0.8px 
 		color: #ffffff 
-		text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1) 
+		text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1)
+.collapse__user-information
+	text-align: center 
+	margin: -55px 0 
+.collapse__user-image_profile
+	max-width: 78px 
+	height: 78px 
+	margin: 0 auto 16px 
+	border-radius: 50% 
+	overflow: hidden 
+	box-shadow: 0px 7.5px 17.5px 0 rgba(0, 0, 0, 0.42) 
+	position: relative 
+	z-index: 10 
+	img
+		width: 100%
+.collapse__user-nickname
+	font-size: 1.1875rem
+	color: #ffffff
+	letter-spacing: 0.8px
+.collapse__user-email
+	color: $wisteriaColor
+	text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1) 
+	letter-spacing: 0.6px
+.collapse__sold-pets,.collapse__bought-pets
+	color: #ffffff 
+	letter-spacing: 0.6px
+	font-size: 1.875rem 
+	text-align: center
+	margin-top: 65px
