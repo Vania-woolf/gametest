@@ -23,10 +23,11 @@ html
 	font-size: $fontSizeBody
 body
 	font-family: "GeomanistBook"
-	max-width: 3000px
 .main_page
 	background-image: url('../img/bg-img.png')
 	background-repeat: repeat
+	max-width: 1520px 
+	margin: 0 auto
 .content
 	max-width: 1520px 
 .header
@@ -101,6 +102,7 @@ a.nav-link
 	line-height: 60px
 	background-image: $HeaderFooterBg 
 	position: absolute 
+	max-width: 1520px
 .p-nav__center
 	right: 50% 
 	left: auto 
@@ -450,9 +452,60 @@ a.nav-link
 	color: $wisteriaColor
 	text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1) 
 	letter-spacing: 0.6px
-.collapse__sold-pets,.collapse__bought-pets
+.collapse__sold-pets._margin,.collapse__bought-pets._margin
+	margin-top: 65px
+	margin-bottom: 43px
+.collapse__sold-pets,.collapse__bought-pets,.collapse__circle-total-games,.collapse__circle-won-games,.collapse__circle-lost-games 
 	color: #ffffff 
 	letter-spacing: 0.6px
 	font-size: 1.875rem 
-	text-align: center
-	margin-top: 65px
+	text-align: center 
+	margin-top: 38px
+	margin-bottom: 18px
+.collapse__sold-pets::after 
+	content: '' 
+	border-right: 2px solid 
+	right: 0 
+	height: 51px 
+	position: absolute 
+	border-color: #7e79c4 
+	opacity: 0.1
+.collapse__sold-pets_text,.collapse__bought-pets_text,.collapse__circle-total-games_text,.collapse__circle-won-games_text,.collapse__circle-lost-games_text
+	letter-spacing: 0.6px 
+	text-align: center 
+	color: #6f6d99 
+	text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1) 
+.collapse__circle-total-games,.collapse__circle-won-games,.collapse__circle-lost-games
+	.num
+		border-radius: 50% 
+		display: inline-block 
+		width: 98px 
+		padding: 26px 0 
+		height: 98px 
+		position: relative 
+		z-index: 10 
+.collapse__circle-total-games,.collapse__circle-won-games,.collapse__circle-lost-games
+	.num::after
+		content: '' 
+		border-radius: 50% 
+		background-origin: border-box 
+		background-clip: content-box, border-box 
+		position: absolute 
+		width: 98px 
+		height: 98px 
+		left: 0 
+		top: 0 
+		z-index: -1	
+		opacity: .6 
+.collapse__circle-total-games
+	.num
+		background-image: url('../img/user-avatar.png') 
+		background-size: cover
+	.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #6d30c8) 
+.collapse__circle-won-games
+	.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #3deb6e) 
+.collapse__circle-lost-games
+	.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #f2626c, #e553aa) 
