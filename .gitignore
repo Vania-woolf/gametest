@@ -4,3 +4,4 @@ info/*
 refs/*
 hooks/*
 objects/*
+package-lock.json

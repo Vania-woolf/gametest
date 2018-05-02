@@ -233,19 +233,8 @@ a.nav-link {
     padding-right: -webkit-calc(20px/2.2);
     padding-right: calc(20px/2.2); } }
 
-@media (min-width: 2200px) {
-  .nav__ico {
-    width: 55px; } }
-
-@media (min-width: 1700px) {
-  .nav__ico {
-    width: -webkit-calc(55px/1.57);
-    width: calc(55px/1.57); } }
-
-@media (max-width: 1700px) {
-  .nav__ico {
-    width: -webkit-calc(55px/2.2);
-    width: calc(55px/2.2); } }
+.nav__ico {
+  width: 24px; }
 
 .user-nav-item.user-nav__money a {
   color: #ffffff;
@@ -411,7 +400,8 @@ a.nav-link {
 .nav-pills {
   font-size: 1rem;
   background-image: url("../img/bg-nav.png");
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  letter-spacing: 0.6px; }
 
 .nav-item .nav-link.active {
   -webkit-border-image: url("../img/border-b-img.png") 1 stretch;
@@ -425,27 +415,25 @@ a.nav-link {
 
 .pills-relative a.nav-link.active:after {
   content: '';
-  background-image: url(../img/bg-button.png);
-  -webkit-background-size: 100% 100%;
-          background-size: 100%;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0; }
+  width: 98%;
+  height: 50%;
+  bottom: 0px;
+  left: 2px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff905a1c), to(#d94fc740));
+  background-image: -webkit-linear-gradient(right, #ff905a1c, #d94fc740);
+  background-image: -o-linear-gradient(right, #ff905a1c, #d94fc740);
+  background-image: linear-gradient(to left, #ff905a1c, #d94fc740);
+  -webkit-border-radius: 50% 50% 0% 0%;
+          border-radius: 50% 50% 0% 0%;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  opacity: 0.6; }
 
 .nav-pills .nav-link {
   -webkit-border-radius: 0;
-          border-radius: 0; }
-  @media (min-width: 2200px) {
-    .nav-pills .nav-link {
-      padding: 40px 120px; } }
-  @media (min-width: 1700px) {
-    .nav-pills .nav-link {
-      padding: 20px 80px; } }
-  @media (max-width: 1700px) {
-    .nav-pills .nav-link {
-      padding: 16px 64px; } }
+          border-radius: 0;
+  padding: 17px 65px; }
 
 .pills-presets-href:before,
 .pills-items-href:before,
@@ -454,7 +442,10 @@ a.nav-link {
 .active.pills-presets-href:before,
 .active.pills-items-href:before,
 .active.pills-pets-href:before,
-.active.pills-statistics-href:before {
+.active.pills-frieds-href:before,
+.pills-frieds-href:before,
+.active.pills-history-href:before,
+.pills-history-href:before {
   content: '';
   -webkit-background-size: contain;
           background-size: contain;
@@ -463,9 +454,9 @@ a.nav-link {
 
 .pills-presets-href:before {
   background-image: url("../img/presets-non-active-ico.png");
-  width: 33px;
-  height: 33px;
-  top: 23px;
+  width: 25px;
+  height: 25px;
+  top: 20px;
   left: 34px; }
 
 .active.pills-presets-href:before {
@@ -473,28 +464,28 @@ a.nav-link {
 
 .pills-items-href:before {
   background-image: url("../img/toolbox-non-active.png");
-  width: 49px;
-  height: 49px;
-  top: 19px;
+  width: 40px;
+  height: 40px;
+  top: 16px;
   left: 26px; }
 
 .active.pills-items-href:before {
   background-image: url("../img/toolbox-ico.png"); }
 
-.pills-pets-href:before {
+.pills-pets-href:before, .pills-frieds-href:before, .pills-history-href:before {
   background-image: url("../img/rectangle-non-active-ico.png");
-  width: 37px;
-  height: 37px;
-  top: 21px;
+  width: 27px;
+  height: 27px;
+  top: 20px;
   left: 35px; }
 
-.active.pills-pets-href:before {
+.active.pills-pets-href:before, .active.pills-frieds-href:before, .active.pills-history-href:before {
   background-image: url("../img/rectangle-active-ico.png"); }
 
 .pills-statistics-href:before {
   background-image: url("../img/statistics-non-active-ico.png");
-  width: 36px;
-  height: 35px;
+  width: 23px;
+  height: 23px;
   top: 20px;
   left: 34px; }
 
@@ -689,6 +680,46 @@ a.nav-link {
   border-color: #7e79c4;
   opacity: 0.1; }
 
+.collapse__sold-pets::before {
+  content: '';
+  background-image: url("../img/Shape-5-copy.png");
+  position: absolute;
+  width: 51px;
+  height: 65px;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  left: 18px;
+  top: 58px; }
+
+.collapse__bought-pets::before {
+  content: '';
+  background-image: url("../img/Shape-5-copy-rotate.png");
+  position: absolute;
+  width: 51px;
+  height: 65px;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  left: 20px;
+  top: 62px; }
+
+.collapse__bought-pets span::before {
+  content: '';
+  -webkit-box-shadow: -36px 8px 57px -10px #3deb6e;
+          box-shadow: -36px 8px 57px -10px #3deb6e;
+  position: absolute;
+  width: 30px;
+  height: 30px; }
+
+.collapse__sold-pets span:before {
+  content: '';
+  -webkit-box-shadow: -25px 8px 57px -10px #6d30c8;
+          box-shadow: -25px 8px 57px -10px #6d30c8;
+  position: absolute;
+  width: 33px;
+  height: 30px; }
+
 .collapse__sold-pets_text, .collapse__bought-pets_text, .collapse__circle-total-games_text, .collapse__circle-won-games_text, .collapse__circle-lost-games_text {
   letter-spacing: 0.6px;
   text-align: center;
@@ -719,27 +750,34 @@ a.nav-link {
   left: 0;
   top: 0;
   z-index: -1;
-  opacity: .6; }
+  opacity: .33; }
 
-.collapse__circle-total-games .num {
-  background-image: url("../img/user-avatar.png");
-  -webkit-background-size: cover;
-          background-size: cover; }
+.collapse__circle-total-games {
+  /*.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #6d30c8) */ }
+  .collapse__circle-total-games .num {
+    background-image: url("../img/total-games-bg.png");
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-position: 2px 40px;
+    background-repeat: no-repeat; }
 
-.collapse__circle-total-games .num::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2d4400), to(#ffffff00)), -webkit-gradient(linear, right top, left top, from(#57b9c9), to(#6d30c8));
-  background-image: -webkit-linear-gradient(#2f2d4400, #ffffff00), -webkit-linear-gradient(right, #57b9c9, #6d30c8);
-  background-image: -o-linear-gradient(#2f2d4400, #ffffff00), -o-linear-gradient(right, #57b9c9, #6d30c8);
-  background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #6d30c8); }
+.collapse__circle-won-games {
+  /*.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #3deb6e) */ }
+  .collapse__circle-won-games .num {
+    background-image: url("../img/total-games-bg.png");
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-position: 2px 40px;
+    background-repeat: no-repeat; }
 
-.collapse__circle-won-games .num::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2d4400), to(#ffffff00)), -webkit-gradient(linear, right top, left top, from(#57b9c9), to(#3deb6e));
-  background-image: -webkit-linear-gradient(#2f2d4400, #ffffff00), -webkit-linear-gradient(right, #57b9c9, #3deb6e);
-  background-image: -o-linear-gradient(#2f2d4400, #ffffff00), -o-linear-gradient(right, #57b9c9, #3deb6e);
-  background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #3deb6e); }
-
-.collapse__circle-lost-games .num::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2d4400), to(#ffffff00)), -webkit-gradient(linear, right top, left top, from(#f2626c), to(#e553aa));
-  background-image: -webkit-linear-gradient(#2f2d4400, #ffffff00), -webkit-linear-gradient(right, #f2626c, #e553aa);
-  background-image: -o-linear-gradient(#2f2d4400, #ffffff00), -o-linear-gradient(right, #f2626c, #e553aa);
-  background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #f2626c, #e553aa); }
+.collapse__circle-lost-games {
+  /*.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #f2626c, #e553aa) */ }
+  .collapse__circle-lost-games .num {
+    background-image: url("../img/total-games-bg.png");
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-position: 2px 40px;
+    background-repeat: no-repeat; }

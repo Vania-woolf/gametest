@@ -2,8 +2,8 @@
 $method = $_SERVER['REQUEST_METHOD'];
 $c = true;
 if ( $method == 'POST' ) {
-	$project_name = "АйдаТуда";
-	$admin_email  = "vetalsd2@gmail.com";
+	$project_name = "Test";
+	$admin_email  = "iilchuk.it@gmail.com";
 	$name = $_POST["name"];
 	$phone = $_POST["phone"];
 	$email = $_POST["email"];
