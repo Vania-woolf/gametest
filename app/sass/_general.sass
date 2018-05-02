@@ -162,12 +162,7 @@ a.nav-link
 		a 
 			padding-right: calc(20px/2.2)
 .nav__ico
-	@media #{$hxlg}
-		width: 55px 
-	@media #{$xlg} 
-		width: calc(55px/1.57)
-	@media #{$_xlg} 
-		width: calc(55px/2.2)
+	width: 24px 
 .user-nav-item.user-nav__money a
 	color: #ffffff 
 	background-image: $gradientButtonPlay 
@@ -271,7 +266,8 @@ a.nav-link
 .nav-pills
 	font-size: 1rem 
 	background-image: url('../img/bg-nav.png')
-	background-repeat: repeat
+	background-repeat: repeat 
+	letter-spacing: 0.6px 
 .nav-item .nav-link.active 
 	border-image: url('../img/border-b-img.png') 1 stretch 
 	border-bottom: 3px solid transparent 
@@ -280,21 +276,18 @@ a.nav-link
 	position: relative 
 .pills-relative a.nav-link.active:after
 	content: '' 
-	background-image: url(../img/bg-button.png) 
-	background-size: 100% 
 	position: absolute 
-	width: 100% 
-	height: 100% 
-	top: 0 
-	left: 0
+	width: 98% 
+	height: 50% 
+	bottom: 0px 
+	left: 2px;
+	background-image: linear-gradient(to left, #ff905a1c, #d94fc740) 
+	border-radius: 50% 50% 0% 0% 
+	filter: blur(4px) 
+	opacity: 0.6 
 .nav-pills .nav-link 
 	border-radius: 0 
-	@media #{$hxlg} 
-		padding: 40px 120px
-	@media #{$xlg}
-		padding: 20px 80px 
-	@media #{$_xlg} 
-		padding: 16px 64px 
+	padding: 17px 65px
 .pills-presets-href:before,
 .pills-items-href:before,
 .pills-pets-href:before,
@@ -302,39 +295,42 @@ a.nav-link
 .active.pills-presets-href:before,
 .active.pills-items-href:before,
 .active.pills-pets-href:before,
-.active.pills-statistics-href:before	
+.active.pills-frieds-href:before,
+.pills-frieds-href:before,
+.active.pills-history-href:before,
+.pills-history-href:before
 	content: '' 
 	background-size: contain 
 	background-repeat: no-repeat 
 	position: absolute 
 .pills-presets-href:before
 	background-image: url('../img/presets-non-active-ico.png') 
-	width: 33px 
-	height: 33px 
-	top: 23px 
+	width: 25px 
+	height: 25px 
+	top: 20px 
 	left: 34px 
 .active.pills-presets-href:before
 	background-image: url('../img/presets-active-ico.png') 
 .pills-items-href:before
 	background-image: url('../img/toolbox-non-active.png') 
-	width: 49px 
-	height: 49px 
-	top: 19px 
+	width: 40px 
+	height: 40px 
+	top: 16px 
 	left: 26px 
 .active.pills-items-href:before
 	background-image: url('../img/toolbox-ico.png')
-.pills-pets-href:before
+.pills-pets-href:before,.pills-frieds-href:before,.pills-history-href:before 
 	background-image: url('../img/rectangle-non-active-ico.png') 
-	width: 37px 
-	height: 37px 
-	top: 21px 
+	width: 27px 
+	height: 27px 
+	top: 20px 
 	left: 35px
-.active.pills-pets-href:before
+.active.pills-pets-href:before,.active.pills-frieds-href:before,.active.pills-history-href:before
 	background-image: url('../img/rectangle-active-ico.png')	
 .pills-statistics-href:before
 	background-image: url('../img/statistics-non-active-ico.png') 
-	width: 36px 
-	height: 35px 
+	width: 23px 
+	height: 23px 
 	top: 20px 
 	left: 34px
 .active.pills-statistics-href:before
@@ -537,21 +533,21 @@ a.nav-link
 		background-size: contain 
 		background-position: 2px 40px 
 		background-repeat: no-repeat 
-	.num::after
-		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #6d30c8) 
+	/*.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #6d30c8) */
 .collapse__circle-won-games
 	.num
 		background-image: url('../img/total-games-bg.png') 
 		background-size: contain 
 		background-position: 2px 40px 
 		background-repeat: no-repeat
-	.num::after
-		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #3deb6e) 
+	/*.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #57b9c9, #3deb6e) */
 .collapse__circle-lost-games
 	.num
 		background-image: url('../img/total-games-bg.png') 
 		background-size: contain 
 		background-position: 2px 40px 
 		background-repeat: no-repeat
-	.num::after
-		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #f2626c, #e553aa) 
+	/*.num::after
+		background-image: linear-gradient(#2f2d4400, #ffffff00), linear-gradient(to left, #f2626c, #e553aa) */ 
