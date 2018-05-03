@@ -909,4 +909,32 @@ a.pets-filter_nav-href
 	top: 18px 
 	background-size: 100% 
 .active._pets-bg-10::before
-	background-image: url('../img/pets-bg-10-active.png') 
+	background-image: url('../img/pets-bg-10-active.png')
+.progress-bar-custom
+	width: 100% 
+	height: 14px 
+	background-image: url('../img/progress-bar-bg.png') 
+	position: relative 
+	margin-top: 15px
+.progress-bar-content 
+	position: absolute 
+	max-width: 100% 
+	height: 100% 
+	background-image: url('../img/progress-bar-bg-active.png') 
+	animation-name: progress 
+	animation-timing-function: ease-in-out 
+	animation-iteration-count: infinite 
+	animation-duration: 3s
+.pets-tab__content_pets-cards
+	@media #{$xlg} 
+		margin: calc(62px/1.57) 
+	@media #{$_xlg} 
+		margin: calc(62px/2.2) 
+.content_pets-cards-img
+	width: calc(100%/6) 
+	display: inline-block 
+	padding: 15px 
+	float: left 
+.content_pets-cards-img img.pets-cards-img
+	width: 100% 
+	max-height: 218px 
