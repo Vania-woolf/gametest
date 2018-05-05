@@ -37,8 +37,15 @@ body
 	padding-bottom: 25px
 .header-logo 
 	display: inline-block
+	@media #{$_sm}
+		display: block 
+		width: 100% 
+		text-align: center 
+		margin-bottom: 20px 
 	.header-logo__link
 		margin-left: 25px
+		@media #{$_sm}
+			margin-left: 0 
 		.header-logo__img
 			height: 49px
 			@media #{$xlg}
@@ -49,6 +56,10 @@ body
 	list-style: none 
 .header-nav__items
 	font-family: "GeomanistMedium" 
+	@media #{$_sm}
+		display: block 
+		width: 100% 
+		margin: 20px 0 15px 0 
 .header-nav__items a 
 	color: $colorLink 
 	font-size: 1rem 
@@ -60,7 +71,8 @@ body
 		margin-left: calc(125px/1.57) 
 	@media #{$_xlg}
 		margin-left: calc(125px/2.2) 
-
+	@media #{$_sm}
+		margin-left: 0
 .header-nav__items.play a
 	font-family: "MyriadProRegular", sans-serif
 	color: #ffffff 
@@ -92,6 +104,11 @@ body
 		margin-right: calc(62px/1.57) 
 	@media #{$_xlg} 
 		margin-right: calc(62px/2.2)
+	@media #{$_sm}
+		display: inline-block 
+		width: 100% 
+		margin: 0 auto 
+		text-align: center 
 a.nav-link
 	color: #9999cc 
 .tab-content.tab-content__pets 
@@ -107,8 +124,13 @@ a.nav-link
 	display: none 
 .d-flex_no-mob
 	display: flex
+	@media #{$_sm}
+		display: block
 .d-inline-flex_no-mob
 	display: inline-flex 
+	@media #{$_sm}
+		display: block 
+		width: 100% 
 .p-nav__center
 	right: 50% 
 	left: auto 
@@ -120,6 +142,13 @@ a.nav-link
 		margin-right: -65px 
 	@media #{$_xlg}
 		margin-right: -50px
+	@media #{$_sm}
+		display: block 
+		right: auto 
+		position: relative 
+		-webkit-padding-start: 0 
+		text-align: center 
+		margin-right: 0 	
 .login-block 
 	color: $colorLink
 	display: inline-flex 
@@ -169,6 +198,9 @@ a.nav-link
 			padding-right: calc(20px/2.2)
 .nav__ico
 	width: 24px 
+.user-nav-item
+	@media #{$_sm}
+		display: inline-block 
 .user-nav-item.user-nav__money a
 	color: #ffffff 
 	background-image: $gradientButtonPlay 
