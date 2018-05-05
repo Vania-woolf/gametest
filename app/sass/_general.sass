@@ -6,12 +6,12 @@ $colorLinkLogin: #666699
 $HeaderFooterBg: url('../img/bg-nav.png') 
 $xs: "(min-width: 319px)"
 $_xs: "(max-width: 350px)"
-$sm: "(min-width: 767px)"
-$_sm: "(max-width: 766px)"
-$md: "(min-width: 1025px)"
-$_md: "(max-width: 1024px)"
-$lg: "(min-width: 1224px)"
-$_lg: "(max-width: 1224px)"
+$sm: "(min-width: 768px)"
+$_sm: "(max-width: 767px)"
+$md: "(min-width: 992px)"
+$_md: "(max-width: 991px)"
+$lg: "(min-width: 1200px)"
+$_lg: "(max-width: 1199px)"
 $_xlg: "(max-width: 1700px)"
 $xlg: "(min-width: 1700px)"
 $hxlg: "(min-width: 2200px)"
@@ -105,6 +105,10 @@ a.nav-link
 	position: fixed  
 	max-width: 1520px
 	display: none 
+.d-flex_no-mob
+	display: flex
+.d-inline-flex_no-mob
+	display: inline-flex 
 .p-nav__center
 	right: 50% 
 	left: auto 
@@ -382,6 +386,8 @@ a.nav-link
 	border-bottom: 2px solid rgba(111, 109, 153, 0.1)		
 .collapse-block_content
 	display: flex 
+	@media #{$_sm}
+		display: block 
 	.coll-content
 		background-image: url(../img/bg-nav.png)
 		background-repeat: repeat 
@@ -389,8 +395,12 @@ a.nav-link
 		box-shadow: 0px 11px 20px 0 rgba(36, 35, 51, 0.45) 
 		height: 214px 
 		border-radius: 5px
+		@media #{$_sm}
+			margin: 0 0 15px 0 
 	.content-b_1,.content-b_3
 		width: 38% 
+		@media #{$_sm}
+			width: 100% 
 	.content-b_2
 		width: 24% 
 		@media #{$hxlg}
@@ -399,6 +409,9 @@ a.nav-link
 			margin: 0 calc(70px/1.57) 
 		@media #{$_xlg}
 			margin: 0 calc(70px/2.2) 
+		@media #{$_sm}
+			width: 100% 
+			margin: 0 0 15px 0 
 .content-b_1:before
 	content: '' 
 	position: absolute 
