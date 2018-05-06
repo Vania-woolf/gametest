@@ -6,6 +6,15 @@ $(document).ready(function() {
 		$(this).toggleClass("active");
 	});
 
+	$('.toggle_btn').click(function(){
+		$(".sandwich").toggleClass("active");
+		if($('.menu').is(':visible')) {
+			$('.menu').slideUp(300);
+		} else {
+			$('.menu').slideDown(300);
+		};
+	});
+
 	var x, i, j, selElmnt, a, b, c;
 
 	x = document.getElementsByClassName("filter-select");

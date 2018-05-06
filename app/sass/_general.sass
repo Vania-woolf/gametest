@@ -15,6 +15,7 @@ $_lg: "(max-width: 1199px)"
 $_xlg: "(max-width: 1700px)"
 $xlg: "(min-width: 1700px)"
 $hxlg: "(min-width: 2200px)"
+$sm_And_md: "(min-width: 768px) and (max-width: 991px)"
 $fontSizeHxlg32: 2.125rem 
 $fontSizeXlg32: calc(2.125rem/1.57) 
 $fontSize_Xlg32: calc(2.125rem/2.2) 
@@ -37,14 +38,14 @@ body
 	padding-bottom: 25px
 .header-logo 
 	display: inline-block
-	@media #{$_sm}
+	@media #{$_md}
 		display: block 
 		width: 100% 
 		text-align: center 
 		margin-bottom: 20px 
 	.header-logo__link
 		margin-left: 25px
-		@media #{$_sm}
+		@media #{$_md}
 			margin-left: 0 
 		.header-logo__img
 			height: 49px
@@ -56,7 +57,7 @@ body
 	list-style: none 
 .header-nav__items
 	font-family: "GeomanistMedium" 
-	@media #{$_sm}
+	@media #{$_md}
 		display: block 
 		width: 100% 
 		margin: 20px 0 15px 0 
@@ -71,8 +72,15 @@ body
 		margin-left: calc(125px/1.57) 
 	@media #{$_xlg}
 		margin-left: calc(125px/2.2) 
-	@media #{$_sm}
+	@media #{$_md}
 		margin-left: 0
+.d-inl-block_mob-only
+	display: inherit 
+	@media #{$_md}
+		display: inline-block
+.marg-t-b-20_mob
+	@media #{$_md}
+		margin: 20px 0		
 .header-nav__items.play a
 	font-family: "MyriadProRegular", sans-serif
 	color: #ffffff 
@@ -104,7 +112,7 @@ body
 		margin-right: calc(62px/1.57) 
 	@media #{$_xlg} 
 		margin-right: calc(62px/2.2)
-	@media #{$_sm}
+	@media #{$_md}
 		display: inline-block 
 		width: 100% 
 		margin: 0 auto 
@@ -124,11 +132,11 @@ a.nav-link
 	display: none 
 .d-flex_no-mob
 	display: flex
-	@media #{$_sm}
+	@media #{$_md}
 		display: block
 .d-inline-flex_no-mob
 	display: inline-flex 
-	@media #{$_sm}
+	@media #{$_md}
 		display: block 
 		width: 100% 
 .p-nav__center
@@ -142,7 +150,7 @@ a.nav-link
 		margin-right: -65px 
 	@media #{$_xlg}
 		margin-right: -50px
-	@media #{$_sm}
+	@media #{$_md}
 		display: block 
 		right: auto 
 		position: relative 
@@ -199,7 +207,7 @@ a.nav-link
 .nav__ico
 	width: 24px 
 .user-nav-item
-	@media #{$_sm}
+	@media #{$_md}
 		display: inline-block 
 .user-nav-item.user-nav__money a
 	color: #ffffff 
@@ -392,9 +400,15 @@ a.nav-link
 			background-size: 19px 23px
 		@media #{$_xlg} 
 			background-size: 14px 18px
+		@media #{$_md}
+			display: block 
+			height: 58px 
+			background-position: 50% 
 	a.arrow_info-button.collapsed
 		background-position: 65% 50% 
 		transform: rotate(180deg) 
+		@media #{$_md}
+			background-position: 50% 
 	@media #{$hxlg}
 		width: 136px 
 	@media #{$xlg}
@@ -403,6 +417,11 @@ a.nav-link
 	@media #{$_xlg} 
 		width: 95px 
 		background-size: 14px 18px
+	@media #{$_md}
+		position: relative 
+		display: block 
+		width: 100% 
+		height: 58px 
 	a 
 		width: 100%
 .pad-0
@@ -418,7 +437,7 @@ a.nav-link
 	border-bottom: 2px solid rgba(111, 109, 153, 0.1)		
 .collapse-block_content
 	display: flex 
-	@media #{$_sm}
+	@media #{$_md}
 		display: block 
 	.coll-content
 		background-image: url(../img/bg-nav.png)
@@ -427,11 +446,12 @@ a.nav-link
 		box-shadow: 0px 11px 20px 0 rgba(36, 35, 51, 0.45) 
 		height: 214px 
 		border-radius: 5px
-		@media #{$_sm}
+		@media #{$_md}
 			margin: 0 0 15px 0 
+			height: auto
 	.content-b_1,.content-b_3
 		width: 38% 
-		@media #{$_sm}
+		@media #{$_md}
 			width: 100% 
 	.content-b_2
 		width: 24% 
@@ -441,7 +461,7 @@ a.nav-link
 			margin: 0 calc(70px/1.57) 
 		@media #{$_xlg}
 			margin: 0 calc(70px/2.2) 
-		@media #{$_sm} 
+		@media #{$_md} 
 			width: 100% 
 			margin: 0 0 15px 0 
 .content-b_1:before
@@ -476,6 +496,8 @@ a.nav-link
 .collapse__user-information
 	text-align: center 
 	margin: -55px 0 
+	@media #{$_md}
+		margin: auto 
 .collapse__user-image_profile
 	max-width: 78px 
 	height: 78px 
@@ -505,6 +527,10 @@ a.nav-link
 	text-align: center 
 	margin-top: 38px
 	margin-bottom: 18px
+	@media #{$_lg} 
+		font-size: 1.4rem 
+	@media #{$_sm}
+		font-size: 1.3rem
 .collapse__sold-pets::after 
 	content: '' 
 	border-right: 2px solid 
@@ -561,6 +587,8 @@ a.nav-link
 		height: 98px 
 		position: relative 
 		z-index: 10 
+		@media #{$_xs}
+			width: 77px 
 .collapse__circle-total-games,.collapse__circle-won-games,.collapse__circle-lost-games
 	.num::after
 		content: '' 
@@ -663,6 +691,9 @@ a.nav-link
 	letter-spacing: 0.6px
 	span
 		float: right 
+		@media #{$sm_And_md}
+			float: none 
+			padding-left: 20px
 .pets-collection_point
 	color: #ffffff 
 	letter-spacing: 0.6px 
@@ -695,6 +726,8 @@ a.nav-link
 	color: #ffffff 
 	position: relative
 	height: 40px
+	@media #{$sm_And_md}
+		width: 18%
 .gem._gem-1:before,.gem._gem-2:before,.gem._gem-3:before,.gem._gem-4:before,.gem._gem-5:before
 	content: '' 
 	height: 36px 
@@ -704,8 +737,13 @@ a.nav-link
 	top: 3px 
 	background-size: contain 
 	background-repeat: no-repeat 
+	@media #{$sm_And_md}
+		right: 25px 
+		left: auto
 .gem._gem-4
 	margin-left: 15% 
+	@media #{$sm_And_md}
+		margin-left: auto
 .gem._gem-1:before
 	background-image: url('../img/gem-left-bar-1.png')
 .gem._gem-2:before
@@ -725,6 +763,8 @@ a.nav-link
 		padding: calc(62px/2.2) 
 .form-control_search
 	max-width: 100% 
+	@media #{$sm_And_md}
+	width: 100% 
 .form-control_search
 	font-family: "GeomanistBook", sans-serif 
 	letter-spacing: 0.6px 
@@ -829,6 +869,12 @@ input.form-control_search::placeholder
 		display: inline-block 
 		width: 10% 
 		float: left 
+		@media #{$_lg}
+			width: 20% 
+		@media #{$sm_And_md}
+			width: 20%
+		@media #{$_sm}
+			width: 50% 
 a.pets-filter_nav-href 
 	padding: 20px 30px 
 	display: block 
@@ -961,6 +1007,10 @@ a.pets-filter_nav-href
 	background-image: url('../img/progress-bar-bg.png') 
 	position: relative 
 	margin-top: 15px
+	@media #{$_lg}
+		max-width: 168px 
+	@media #{$_md}
+		max-width: 168px
 .progress-bar-content 
 	position: absolute 
 	max-width: 100% 
@@ -980,6 +1030,71 @@ a.pets-filter_nav-href
 	display: inline-block 
 	padding: 15px 
 	float: left 
+	@media #{$_lg}
+		width: calc(100%/4) 
+	@media #{$sm_And_md}
+		width: calc(100%/4)
+	@media #{$_sm}
+		width: calc(100%/2) 
 .content_pets-cards-img img.pets-cards-img
 	width: 100% 
 	max-height: 218px 
+	@media #{$sm_And_md}
+		width: auto 
+	@media #{$_sm}
+		max-height: 185px
+	@media #{$_xs}
+		max-height: 150px 
+.toggle_btn 
+	display: none 
+	height: 30px 
+	width: 30px 
+	position: absolute 
+	z-index: 200 
+	top: 22px 
+	right: 25% 
+	left: auto 
+	background-color: #00899d 
+	border-radius: 3px 
+	@media #{$_sm}
+		display: block 
+.toggle_btn .sandwich  
+	width: 30px 
+	height: 30px 
+	position: absolute 
+	top: 0 
+	bottom: 0 
+	left: 0 
+	right: 0 
+	margin: auto 
+.toggle_btn .sandwich span 
+	height: 2px 
+	width: 24px 
+	position: relative 
+	border-radius: 2px 
+	left: 3px 
+	background-color: #fff 
+	display: block 
+.toggle_btn .sandwich span.sw-topper 
+	top: 6px 
+	transition: transform 0.3s, top 0.2s 
+.toggle_btn .sandwich span.sw-bottom 
+	top: 12px 
+	transition: transform 0.3s, top 0.2s 
+	transition-delay: 0.1s, 0s 
+.toggle_btn .sandwich span.sw-footer 
+	top: 18px 
+	transition: all 0.5s 
+	transition-delay: 0.1s 
+.toggle_btn .sandwich.active .sw-topper 
+	top: 15px 
+	-moz-transform: rotate(-45deg) 
+	transform: rotate(-45deg) 
+.toggle_btn .sandwich.active .sw-bottom 
+	top: 13px 
+	-moz-transform: rotate(45deg) 
+	transform: rotate(45deg) 
+.toggle_btn .sandwich.active .sw-footer 
+	opacity: 0 
+	top: 0 
+	transform: rotate(180deg)		
