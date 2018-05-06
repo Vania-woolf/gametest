@@ -11,7 +11,7 @@
 	
 	<header>
 		<div class="header ">
-			<div class="header-content d-flex justify-content-between">
+			<div class="header-content d-flex_no-mob justify-content-between">
 
 
 
@@ -21,8 +21,8 @@
 					</a>
 				</div>
 
-				<div class="mt-0 d-inline-flex">
-					<ul class="header-nav d-flex list-style-none p-nav__center">
+				<div class="mt-0 d-inline-flex_no-mob"> 
+					<ul class="header-nav d-flex_no-mob list-style-none p-nav__center">
 						<li class="header-nav__items"><a href="#">Marketplace</a></li>
 						<li class="header-nav__items m_l-items play"><a href="#">Battleground</a></li>
 						<li class="header-nav__items m_l-items"><a href="#">Buster Packs</a></li>
@@ -41,39 +41,42 @@
 				<!-- login block end -->
 
 				<div class="user-nav">
+					<div class="d-inl-block_mob-only marg-t-b-20_mob">
+						<div class="user-nav-item m_l-item user-nav__presets">
+							<a href="#" class="nav__presets_href">
+								<img class="nav__ico" src="./img/nav__presets-ico.png" alt="presets-ico" />
+							</a>
+						</div>
+
+						<div class="user-nav-item m_l-item user-nav__toolbox">
+							<a href="#" class="nav__toolbox_href">
+								<img class="nav__ico" src="./img/nav__toolbox-ico.png" alt="presets-ico" />
+							</a>
+						</div>
+
+						<div class="user-nav-item m_l-item user-nav__cards">
+							<a href="#" class="nav__cards_href">
+								<img class="nav__ico" src="./img/nav__cards-ico.png" alt="presets-ico" />
+							</a>
+						</div>
+					</div>
 					
-					<div class="user-nav-item m_l-item user-nav__presets">
-						<a href="#" class="nav__presets_href">
-							<img class="nav__ico" src="./img/nav__presets-ico.png" alt="presets-ico" />
-						</a>
-					</div>
+					<div class="d-inl-block_mob-only marg-t-b-20_mob">
+						<div class="user-nav-item m_l-item_72 user-nav__money"> 
+							<a href="#">142</a>
+						</div>
 
-					<div class="user-nav-item m_l-item user-nav__toolbox">
-						<a href="#" class="nav__toolbox_href">
-							<img class="nav__ico" src="./img/nav__toolbox-ico.png" alt="presets-ico" />
-						</a>
-					</div>
+						<div class="user-nav-item m-t_fix m_l-item_33 user-nav__achievement">
+							<a href="#">
+								<img class="nav__ico" src="./img/achievement-cup-ico.png" alt="cup-ico"/>
+							</a>
+						</div>
 
-					<div class="user-nav-item m_l-item user-nav__cards">
-						<a href="#" class="nav__cards_href">
-							<img class="nav__ico" src="./img/nav__cards-ico.png" alt="presets-ico" />
-						</a>
-					</div>
-
-					<div class="user-nav-item m_l-item_72 user-nav__money"> 
-						<a href="#">142</a>
-					</div>
-
-					<div class="user-nav-item m-t_fix m_l-item_33 user-nav__achievement">
-						<a href="#">
-							<img class="nav__ico" src="./img/achievement-cup-ico.png" alt="cup-ico"/>
-						</a>
-					</div>
-
-					<div class="user-nav-item m-t_fix m_l-item_33 user-nav__avatar">
-						<a href="#" class="user-online"><!-- class="user-offline" -->
-							<img class="nav__ico" src="./img/achievement-cup-ico.png" alt="cup-ico"/>
-						</a>
+						<div class="user-nav-item m-t_fix m_l-item_33 user-nav__avatar">
+							<a href="#" class="user-online"><!-- class="user-offline" -->
+								<img class="nav__ico" src="./img/achievement-cup-ico.png" alt="cup-ico"/>
+							</a>
+						</div>
 					</div>
 
 				</div>
@@ -181,7 +184,7 @@
 	</div>
 	<main>
 
-		<ul class="nav nav-pills p-relative d-flex justify-content-center m-t_fix" id="pills-tab" role="tablist">
+		<ul class="nav nav-pills p-relative d-flex_no-mob justify-content-center m-t_fix" id="pills-tab" role="tablist">
 			<li class="nav-item pills-relative ">
 				<a class="nav-link active pills-presets-href" id="pills-presets-tab" data-toggle="pill" href="#pills-presets" role="tab" aria-controls="pills-presets" aria-selected="true">Presets</a>
 			</li>
@@ -208,7 +211,7 @@
 
 			<div class="tab-pane fade show active" id="pills-presets" role="tabpanel" aria-labelledby="pills-presets-tab">
 				
-				<div class="tab-pane__content_presets">
+<!-- 				<div class="tab-pane__content_presets">
 					
 					<div class="container-fluid">	
 						<div class="row">
@@ -231,7 +234,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 
 			</div>
@@ -239,7 +242,7 @@
 			<div class="tab-pane fade" id="pills-pets" role="tabpanel" aria-labelledby="pills-pets-tab">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-2 pad-0">
+						<div class="col-lg-3 col-xl-2 pad-0">
 							<div class="pets-tab__left-bar">
 								<div class="pets-tab__left-bar_content">
 									<div class="pets-collection">
@@ -301,7 +304,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-10 pad-0 d-none">
+						<div class="col-lg-9 col-xl-10 pad-0 d-none">
 							<div class="pets-tab__content_no-pets text-center">
 								<div class="no-pets__white-text">You Have No Pets!</div>
 								<div class="no-pets__small-text">
@@ -312,7 +315,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-10 pad-0">
+						<div class="col-lg-9 col-xl-10 pad-0">
 							<div class="pets-tab__content_pets">
 								<div class="pets-tab__content_pets-filter">
 									<div class="content_pets-filter_nav">
